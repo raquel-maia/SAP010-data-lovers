@@ -1,5 +1,5 @@
 // Importa os dados dos países
-import { filterBySubregion, filterByContinent, orderByAlphabetical } from './data.js'; 
+/* import { countriesBySubregion, countriesByContinents } from './data.js'; */
 import data from "./data/countries/countries.js";
 
 // Seleciona os elementos do seletor, da lista de países e do seletor de continentes
@@ -8,8 +8,6 @@ const countryListElement = document.querySelector(".bandeiras");
 const continentSelectorElement = document.querySelector("#seletor_continent");
 const populationResultElement = document.querySelector("#populationResult");
 
-
-/* 
 // Ordena os países em ordem alfabética
 const orderByAlphabetical = () => {
   // Faz uma cópia do array de países e ordena em ordem alfabética
@@ -18,8 +16,97 @@ const orderByAlphabetical = () => {
     .sort((a, b) => a.name.common.localeCompare(b.name.common));
   // Renderiza a lista de países ordenada
   renderCountryList(sortedCountries);
-}; */
+};
 
+//==============FILTRAR POR SUBREGIÃO (AS AMERICAS)==============
+
+// Filtra os países por subregião America do Sul
+const filterBySouthAmerica = () => {
+  // Filtra o array de países pela subregião selecionada
+  const filteredCountries = data.countries.filter(
+    (country) => country.subregion === "South America"
+  );
+  // Renderiza a lista de países filtrada
+  renderCountryList(filteredCountries);
+};
+
+// Filtra os países por subregião
+const filterByAmericaNorte = () => {
+  // Filtra o array de países pela subregião selecionada
+  const filteredCountries = data.countries.filter(
+    (country) => country.subregion === "North America"
+  );
+  // Renderiza a lista de países filtrada
+  renderCountryList(filteredCountries);
+};
+
+// Filtra os países por subregião América Central
+const filterByCentralAmerica = () => {
+  // Filtra o array de países pela subregião selecionada
+  const filteredCountries = data.countries.filter(
+    (country) => country.subregion === "Central America"
+  );
+  // Renderiza a lista de países filtrada
+  renderCountryList(filteredCountries);
+};
+
+//==============FILTRAR POR CONTINENTE==============
+
+const filterByAsia = () => {
+  // Filtra o array de países pelo continente selecionado
+  const filteredCountries = data.countries.filter(
+    (country) => country.continents === "Asia"
+  );
+  // Renderiza a lista de países filtrada
+  renderCountryList(filteredCountries);
+};
+const filterByAfrica = () => {
+  // Filtra o array de países pelo continente selecionado
+  const filteredCountries = data.countries.filter(
+    (country) => country.continents === "Africa"
+  );
+  // Renderiza a lista de países filtrada
+  renderCountryList(filteredCountries);
+};
+const filterByOceania = () => {
+  // Filtra o array de países pelo continente selecionado
+  const filteredCountries = data.countries.filter(
+    (country) => country.continents === "Oceania"
+  );
+  // Renderiza a lista de países filtrada
+  renderCountryList(filteredCountries);
+};
+
+const filterByEuropa = () => {
+  // Filtra o array de países pelo continente selecionado
+  const filteredCountries = data.countries.filter(
+    (country) => country.continents === "Europa"
+  );
+  // Renderiza a lista de países filtrada
+  renderCountryList(filteredCountries);
+};
+
+//==============FILTRAR A SUBREGIÃO E O CONTINENTE RENDERIZANDO==============
+
+// Filtra os países por subregião
+const filterBySubregion = (subregion) => {
+  // Filtra o array de países pela subregião selecionada
+  const filteredCountries = data.countries.filter(
+    (country) => country.subregion === subregion
+  );
+  // Renderiza a lista de países filtrada
+  renderCountryList(filteredCountries);
+};
+
+// Filtra os países por continente
+const filterByContinent = (continent) => {
+  // Filtra o array de países pelo continente selecionado
+  const filteredCountries = data.countries.filter((country) =>
+    country.continents.includes(continent)
+  );
+  // Renderiza a lista de países filtrada
+  renderCountryList(filteredCountries);
+};
 
 //==============CRIAR EVENTLISTENERS AO ESCOLHER O CONTINENTE/SUBREGIÃO==============
 
@@ -28,31 +115,23 @@ continentSelectorElement.addEventListener("change", (event) => {
   // Verifica o valor do seletor de sub-regiões
   const value = event.target.value;
   if (value === "amer_central") {
-    let amerCentral = filterBySubregion("Central America", data)
     // Filtra os países pela sub-região selecionada e renderiza a lista
-    renderCountryList (amerCentral);
+    filterBySubregion("Central America");
   } else if (value === "amer_sul") {
-    let amerSul = filterBySubregion("South America", data)
     // Filtra os países pela sub-região selecionada e renderiza a lista
-    renderCountryList (amerSul);
+    filterBySubregion("South America");
   } else if (value === "amer_norte") {
-    let amerNorte = filterBySubregion("North America", data)
     // Filtra os países pela sub-região selecionada e renderiza a lista
-    renderCountryList (amerNorte)
-
-
+    filterBySubregion("North America");
   } else if (value === "asia") {
-    let asia = filterByContinent("Asia", data)
-    renderCountryList (asia);
+    // Filtra os países pela sub-região selecionada e renderiza a lista
+    filterByContinent("Asia");
   } else if (value === "africa") {
-    let africa = filterByContinent("Africa", data)
-    renderCountryList (africa);
+    filterByContinent("Africa");
   } else if (value === "oceania") {
-    let oceania = filterByContinent("Oceania", data);
-    renderCountryList (oceania);
+    filterByContinent("Oceania");
   } else if (value === "europa") {
-    let europa = filterByContinent("Europe", data);
-    renderCountryList (europa);
+    filterByContinent("Europe");
   } else {
     renderCountryList([]);
   }
@@ -130,4 +209,6 @@ selectorElement.addEventListener("change", (event) => {
 */
 
 /*=======================CALCULO TOTAL DA POPULAÇÃO ================*/
+
+
 
