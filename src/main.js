@@ -1,5 +1,5 @@
 // Importa os dados dos países
-import { filterBySubregion, filterByContinent, orderByAlphabetical } from './data.js'; 
+import { filterBySubregion, filterByContinent } from './data.js'; 
 import data from "./data/countries/countries.js";
 
 // Seleciona os elementos do seletor, da lista de países e do seletor de continentes
