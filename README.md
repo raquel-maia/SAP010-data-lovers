@@ -8,10 +8,7 @@
 * [4. Instruções de uso](#4-Instruções-de-Uso )
 * [5. Tecnologias](#5-Tecnologias )
 
-
-***
-
-## 1. Resumo do projeto
+## 1. Resumo do projeto 💡
 
 TravelCode© é uma ferramenta desenvolvida no BootCamp da Laboratória pelas alunas Carol Protásio e Raquel Maia. A ferramenta foi criada com o objetivo de fornecer informações precisas e atualizadas sobre diversos países, incluindo dados como população, idioma, bandeira e outras características relevantes. Com o TravelCode©, estudantes, pesquisadores, viajantes e outras pessoas interessadas podem acessar facilmente informações geográficas de diferentes países ao redor do mundo. A ferramenta oferece uma maneira conveniente de explorar e ampliar o conhecimento sobre a geografia global.
 
@@ -53,3 +50,4 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Git e Github
 - Figma
 - NPM/Jest
+
