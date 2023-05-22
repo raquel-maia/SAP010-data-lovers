@@ -13,7 +13,7 @@
 TravelCode© é uma ferramenta desenvolvida no BootCamp da Laboratória pelas alunas Carol Protásio e Raquel Maia. A ferramenta foi criada com o objetivo de fornecer informações precisas e atualizadas sobre diversos países, incluindo dados como população, idioma, bandeira e outras características relevantes. Com o TravelCode©, estudantes, pesquisadores, viajantes e outras pessoas interessadas podem acessar facilmente informações geográficas de diferentes países ao redor do mundo. A ferramenta oferece uma maneira conveniente de explorar e ampliar o conhecimento sobre a geografia global.
 
 Veja o projeto finalizado  <a href="https://carolprotasio.github.io/SAP010-data-lovers/" target="_blank"
-              >Projeto TravelCode/a>
+              >Projeto TravelCode</a>
 
 ## 2. Usuários e suas necessidades 🔍
 
